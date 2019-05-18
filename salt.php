@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: text/plain');
+
 $inputLength = '128';
 
 if ($_GET['length']) {
