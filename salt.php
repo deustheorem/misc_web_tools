@@ -1,9 +1,9 @@
 <?php
 
+$inputLength = '128';
+
 if ($_GET['length']) {
     $inputLength = $_GET['length'];
-} else {
-    $inputLength = '128';
 }
 
 function generateRandomString($length)
@@ -14,6 +14,8 @@ function generateRandomString($length)
     for ($i = 0; $i < $length; ++$i) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
+
+    return $randomString;
 }
 
 echo generateRandomString($inputLength);
